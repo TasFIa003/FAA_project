@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Education Events |FAA</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../css/main.css">
+        <!-- Bootstrap icon-->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    </head>
+<body>
+    <div class="division container-fluid">
+        <div class="row">
+            <div class="col-md-2">
+               <p class="text-center text-capitalize">educate women to educate nation</p>
+            </div>
+            <div class="col-md-10">
+                <%edls.forEach(function(ed){%>
+                <div class="card shadow-lg p-5 border-0">
+                    <%if(ed.image){%>
+                        <img src="<%=ed.image%>" class="card-img-top" width="20%">
+                        <%}else{%>
+                        <img src="images/banner.jpg" class="card-img-top" width="20%">
+                        <%}%> 
+                
+                    <div class="m-5 card-body">
+                    <div class="timedate">
+                        <p class="fs-3 fw-bold card-text">When and Where</p>
+                        <div class="m-4 row">
+                          <div class="fs-4 col-md-6">
+                              <p style="color:rgb(10, 11, 81);"><i class="bi bi-calendar-event m-2"></i>Date and Time:</p>
+                              <p class="date m-3"><%=ed.date%></p>
+                          </div>
+                          <div class="fs-4 col-md-6">
+                              <p style="color:rgb(10, 11, 81);"><i class="bi bi-geo-alt-fill m-2"></i>Location:</p>
+                              <p class="location m-3"><%=ed.location%></p>
+                          </div>
+                        </div>
+                    </div>
+                     <div class="mt-5 aboutevent">
+                        <p class="fs-3 fw-bold card-text">About this event</p>
+                        <p><%-ed.details%></p>
+                     </div>
+                    </div>
+                </div>
+                <%});%>
+            </div>
+        </div>
+    </div>
+     
+   
+
+   
+    
+
+
+   
+
+   
+
+
+    <div class="footer-text">
+        <div class="fixed-bottom fs-6  text-center">	&copy; Tasfia Noor 2022</div>
+      </div>
+     <!-- Bootstrap Bundle with Popper -->
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    
+       <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+       
+</body>
+</html>

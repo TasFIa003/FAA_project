@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>financial|FAA</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <!-- Bootstrap icon-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+
+
+</head>
+<body class="financial">
+    <div class="container-fluid">
+    
+      <div class="card  logobg border-0 shadow-sm ">
+        <div class="">
+            <h4 class="m-4 text-center ">Financial Segments</h4>
+        </div>
+      </div>
+    
+       <div class="container">
+        
+          <div class="row">
+            <div class="col-lg-7">
+                <div class="finance">
+                  <%fls.forEach(function(ed){%>
+                  <div class="card border-0 m-5">
+                    <%if(ed.image){%>
+                      <img src="<%=ed.image%>" class="card-img-top w-75" alt="...">
+                      <%}else{%>
+                      <img src="images/banner.jpg" class="card-img-top w-75" alt="...">
+                      <%}%> 
+                    <div class="card-body">
+                      <h5 class="card-title fw-bolder fs-3 text-danger"><%=ed.title%></h5>
+                      <p class="card-text"><%-ed.details%></p>
+
+                    </div>
+                  </div>
+                  <%});%>
+                 
+                </div>
+            </div>
+            <div class="col-lg-5">
+              <div class="container m-5">
+                <div class="card border-0 shadow-sm mb-3" style="max-width: 20rem;">
+                  
+                  <div class="card-body text-dark">
+                    <h5 class="card-title">Donate Here</h5>
+                    <p class="card-text">Available donate method:</p>
+                    <div class="row">
+                      <div class="col-3">
+                        <img src="images/BKash.png" alt="" class="w-100">
+                      </div>
+                      <div class="col-3">
+                        <img src="images/Nagad-logo.png" alt="" class="w-100">
+                      </div>
+                      <div class="col-3">
+                        <img src="images/upay.png" alt="" class="w-75">
+                      </div>
+                      <div class="col-3">
+                        <img src="images/rocket.png" alt="" class="w-100">
+                      </div>
+                    </div>
+                    <p class="card-text">Bkash and Nagad number:<span class="text-danger"> 01706794170</span> </p>
+                    <p class="card-text">Upay and Rocket number<span class="text-danger"> 01720223547</span> </p>
+                    <p class="card-text">Please give your phone number and transaction id </p>
+                    <form action="/donation-method" method="post">
+                      <div class="mb-3">
+                          <label for="exampleFormControlInput1" class="form-label">Phone Number</label>
+                          <input type="text" name="phone" class="form-control" id="exampleFormControlInput1" placeholder="" required>
+                      </div>
+                      <div class="mb-3">
+                          <label for="exampleFormControlInput2" class="form-label">Transaction id</label>
+                          <input type="text" name="tid" class="form-control" id="exampleFormControlInput2" placeholder="" required>
+                      </div>
+                      <div class="mb-3">
+                        <label for="exampleFormControlInput3" class="form-label">Payment method</label>
+                        <select class="form-select" name="select" aria-label="Default select example" id="exampleFormControlInput3" required>
+                          <option selected>Select payment method</option>
+                          <option value="Bkash">Bkash</option>
+                          <option value="Nagad">Nagad</option>
+                          <option value="Upay">Upay</option>
+                          <option value="Rocket">Rocket</option>
+                         </select>
+                      </div>
+                      
+                    
+                      <div class="d-grid gap-2 col-6 mx-auto">
+                        <button type="submit" href="/successful" class="btn btn-outline-success w-100" id="submit">Done</button>
+                      </div> 
+                    </form>
+
+                  </div>
+                </div>
+                <!--<div class="card border-0 shadow-sm mb-3" style="max-width: 20rem;">
+                  <div class="card-body text-dark">
+                    <h5 class="card-title"></h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  </div>
+                </div>-->
+              </div>
+            </div>
+          </div>
+       </div>
+    </div>
+     
+   
+
+   
+    
+
+
+   
+
+   
+
+
+    <div class="fixed-bottom footer-text">
+        <div class="fs-6  text-center">	&copy; Tasfia Noor 2022</div>
+      </div>
+     <!-- Bootstrap Bundle with Popper -->
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    
+       <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+     
+</body>
+</html>

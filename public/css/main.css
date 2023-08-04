@@ -1,0 +1,290 @@
+@import url("https://fonts.googleapis.com/css2?family=Newsreader:opsz@6..72&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Newsreader", serif;
+  background-color: rgba(243, 243, 243, 0.941);
+}
+
+.logobg {
+  background-color: #fff;
+  font-family: "Newsreader", serif;
+}
+.logobg .logo {
+  height: 4rem;
+  width: 10rem;
+}
+.logobg p {
+  font-size: 1.2rem;
+  margin-left: 5%;
+  color: rgba(0, 0, 0, 0.76);
+}
+.logobg p:hover {
+  color: rgb(89, 7, 89);
+}
+
+.bgcover {
+  background-color: rgb(24, 1, 30);
+  font-family: "Newsreader", serif;
+}
+.bgcover .card-img-overlay {
+  background: rgba(40, 1, 38, 0.888);
+  opacity: 0.8;
+}
+.bgcover .card-img-overlay a {
+  color: #fff;
+  font-size: 1.25rem;
+  text-decoration: none;
+}
+.bgcover .card-img-overlay a:hover {
+  background-color: rgba(242, 246, 105, 0.777);
+  color: rgb(56, 5, 51);
+  opacity: 0.7;
+}
+.bgcover .card-img-overlay .context {
+  margin-top: 20%;
+  height: 200px;
+  width: inherit;
+  background-color: rgba(48, 15, 51, 0.703);
+  color: rgb(255, 255, 255);
+}
+.bgcover .card-img-overlay .context:hover {
+  color: rgb(245, 43, 221);
+}
+
+.events {
+  margin: 9%;
+}
+.events h2 {
+  color: rgb(53, 3, 50);
+}
+.events .upcoming {
+  border: 1px solid rgb(230, 0, 255);
+  background-color: rgb(37, 6, 30);
+  height: inherit;
+}
+.events .upcoming .news {
+  background-color: rgb(120, 40, 119);
+  word-spacing: 20px;
+  height: inherit;
+  opacity: 0.9;
+  z-index: 1;
+}
+.events .upcoming .outline {
+  border: 1px solid rgb(41, 2, 41);
+  background-color: rgb(58, 20, 58);
+  opacity: 0.9;
+  color: #fff;
+}
+.events .upcoming .outline:hover {
+  background-color: rgb(243, 220, 53);
+  color: rgb(35, 2, 23);
+}
+
+.about {
+  margin: 9%;
+}
+.about h2 {
+  color: rgb(53, 3, 50);
+}
+.about .aboutus {
+  border: 1px solid rgb(209, 13, 176);
+}
+.about .aboutus .col-10 {
+  color: rgb(44, 4, 40);
+}
+.about .aboutus .col-2 {
+  background-color: rgb(132, 28, 126);
+}
+.about .aboutus:hover {
+  border: 1px solid rgb(225, 250, 61);
+}
+.about .aboutus:hover .col-10 {
+  color: rgb(112, 3, 101);
+}
+.about .aboutus:hover .col-2 {
+  background-color: rgb(254, 51, 197);
+}
+
+.projects {
+  margin: 9%;
+}
+.projects h2 {
+  color: rgb(53, 3, 50);
+}
+.projects .card {
+  border: 1px solid rgb(221, 0, 255);
+}
+.projects .card .img1 {
+  width: 50%;
+}
+.projects .card .img2 {
+  width: 40%;
+  filter: saturate(3);
+  -webkit-filter: saturate(3);
+  filter: grayscale(50%);
+  -webkit-filter: grayscale(50%);
+  filter: contrast(100%);
+  -webkit-filter: contrast(100%);
+  filter: brightness(0.75);
+  -webkit-filter: brightness(0.75);
+}
+.projects .card .img3 {
+  width: 40%;
+}
+.projects .card .card-body {
+  color: rgb(60, 2, 57);
+}
+.projects .card .outline {
+  color: rgb(82, 4, 61);
+}
+.projects .card:hover {
+  border: 2px solid rgb(165, 121, 18);
+  background-color: rgba(215, 122, 255, 0.254);
+  transition: 1s ease;
+  transform: scale(1.1);
+}
+.projects .card:hover .card-body {
+  color: rgb(87, 9, 107);
+}
+.projects .card:hover .outline {
+  background-color: rgb(243, 17, 232);
+  color: #fff;
+}
+
+.success {
+  margin-top: 20%;
+  margin-bottom: 5%;
+}
+.success .card {
+  background-color: rgba(83, 4, 111, 0.863);
+  opacity: 1;
+}
+.success h2 {
+  color: rgb(53, 3, 50);
+}
+.success .carousel-item img {
+  filter: saturate(3);
+  -webkit-filter: saturate(3);
+  filter: grayscale(50%);
+  -webkit-filter: grayscale(50%);
+  filter: contrast(100%);
+  -webkit-filter: contrast(100%);
+  filter: brightness(0.75);
+  -webkit-filter: brightness(0.75);
+}
+.success .carousel-item .carousel-caption {
+  color: rgb(250, 201, 248);
+  font-size: 1.3rem;
+  background-color: rgba(0, 0, 0, 0.68);
+}
+
+.suggestions {
+  background-color: rgb(24, 1, 30);
+  color: #fff;
+}
+
+.division .col-md-2 {
+  background-color: rgba(124, 0, 115, 0.862);
+  height: auto;
+  max-height: fit-content;
+}
+.division .col-md-2 p {
+  color: White;
+  font-size: 1.6rem;
+  padding-top: 5.5em;
+}
+.division .col-md-2:hover {
+  background-color: rgb(196, 4, 138);
+  transition: 1s ease-in-out;
+}
+.division .col-md-2:hover p {
+  color: rgb(255, 191, 0);
+  transform: scale(0.94);
+  animation: scale 0.5s forwards cubic-bezier(0.5, 1, 0.89, 1);
+}
+@keyframes scale {
+  100% {
+    transform: scale(1);
+  }
+}
+.division .col-md-10 .date, .division .col-md-10 .location {
+  color: gray;
+  font-size: 1rem;
+  width: 200px;
+  height: fit-content;
+}
+.division .col-md-10 .show .btn {
+  color: rgb(141, 5, 105);
+}
+
+.Health .col-md-2 {
+  background-color: rgba(124, 0, 115, 0.862);
+  max-height: fit-content;
+}
+.Health .col-md-2 p {
+  color: White;
+  font-size: 1.6rem;
+  padding-top: 5.5em;
+}
+.Health .col-md-2:hover {
+  background-color: rgb(196, 4, 138);
+  transition: 1s ease-in-out;
+}
+.Health .col-md-2:hover p {
+  color: rgb(255, 191, 0);
+  transform: scale(0.94);
+  animation: scale 0.5s forwards cubic-bezier(0.5, 1, 0.89, 1);
+}
+@keyframes scale {
+  100% {
+    transform: scale(1);
+  }
+}
+.Health .col-md-10 .date, .Health .col-md-10 .location {
+  color: gray;
+  font-size: 1rem;
+  width: 200px;
+  height: fit-content;
+}
+.Health .col-md-10 .show {
+  color: rgb(141, 5, 105);
+}
+
+.textblog h4 {
+  font-family: "Pacifico", cursive;
+}
+.textblog a {
+  text-decoration: none;
+  color: aqua;
+}
+
+.financial {
+  background-color: #fff;
+}
+.financial .logobg {
+  background-color: rgb(124, 4, 112);
+  font-family: "Pacifico", cursive;
+  color: #fff;
+}
+
+/****** admin panel design css *********/
+.dashboard {
+  background-color: #fff;
+}
+.dashboard .offcanvas-body a {
+  line-height: 50px;
+}
+.dashboard .offcanvas-body a:hover {
+  border: 1px dotted rgb(12, 240, 232);
+}
+
+.dashboard2 {
+  background-color: #fff;
+}
+.dashboard2 .card {
+  background-color: rgb(91, 1, 116);
+}

@@ -1,0 +1,370 @@
+@import url('https://fonts.googleapis.com/css2?family=Newsreader:opsz@6..72&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+
+$babyPink:#fff;
+$font:'Newsreader', serif;
+$font2:'Pacifico', cursive;
+$purple:rgb(53, 3, 50);
+@mixin color {
+    
+        filter: saturate(3);
+        -webkit-filter: saturate(3);
+     
+        filter: grayscale(50%);
+        -webkit-filter: grayscale(50%);
+     
+        filter: contrast(100%);
+        -webkit-filter: contrast(100%);
+     
+        filter: brightness(0.75);
+        -webkit-filter: brightness(0.75);
+      
+}
+
+@mixin marginHead{
+    margin:9%;
+    h2{
+        color:$purple;
+    }
+}
+
+
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: $font;
+    background-color: rgba(243, 243, 243, 0.941);
+}
+
+.logobg{
+    background-color: $babyPink;
+    font-family:$font;
+    .logo{
+        height: 4rem;
+        width: 10rem;
+    }
+    
+     p{
+         
+        font-size: 1.2rem;
+        margin-left: 5%; 
+        color: rgba(0, 0, 0, 0.76); 
+     
+        &:hover{
+        color: rgb(89, 7, 89);
+        }
+    }
+}
+
+.bgcover{
+    background-color: rgb(24, 1, 30);
+    font-family:$font;
+    .card-img-overlay{
+        background: rgba(40, 1, 38, 0.888);
+        opacity: 0.8;
+        a{
+            color:#fff;
+            font-size: 1.25rem;
+            text-decoration: none;
+
+            &:hover{
+                background-color: rgba(242, 246, 105, 0.777);
+                color: rgb(56, 5, 51);
+                opacity: 0.7;
+
+            }
+        }
+        .context{
+            margin-top: 20%;
+            height: 200px;
+            width: inherit;
+            background-color: rgba(48, 15, 51, 0.703);
+            color:rgb(255, 255, 255);
+
+            &:hover{
+                //background-color: rgba(246, 242, 35, 0.703);
+                color:rgb(245, 43, 221);
+            }
+
+        }
+    }
+
+}
+
+
+
+.events{
+    //background-color:rgb(24, 1, 30);
+    @include marginHead;
+    //font-family: $font;
+  
+    .upcoming{
+        border: 1px solid rgb(230, 0, 255);
+        background-color: rgb(37, 6, 30);
+        height: inherit;
+       .news{
+        //font-size: 1.5rem;
+        background-color: rgb(120, 40, 119);
+        word-spacing: 20px;
+        height: inherit;
+        opacity: 0.9;
+        z-index: 1;
+       }
+       .outline{
+          border: 1px solid rgb(41, 2, 41);
+          background-color: rgb(58, 20, 58);
+          opacity: 0.9;
+          color: #fff;
+
+          &:hover{
+            background-color: rgb(243, 220, 53);
+            color: rgb(35, 2, 23);
+          }
+       }
+    }
+
+}
+
+.about{
+    
+    @include marginHead;
+    .aboutus{
+        border:1px solid rgb(209, 13, 176) ;
+        .col-10{
+            color:rgb(44, 4, 40);
+        }
+        .col-2{
+            
+            background-color: rgb(132, 28, 126);
+           
+            
+        }
+        &:hover{
+            border:1px solid rgb(225, 250, 61) ;
+            .col-10{
+                color:rgb(112, 3, 101);
+                
+            }
+            .col-2{
+                
+                background-color: rgb(254, 51, 197);
+               
+                
+            }
+        }
+    }
+   
+}
+
+.projects{
+    @include marginHead;
+    .card{
+      border: 1px solid rgb(221, 0, 255);  
+        .img1{
+            width: 50%;
+        }
+        .img2{
+            width: 40%;
+            @include color;
+            
+            
+        }
+        .img3{
+               
+             width: 40%;
+         }
+         .card-body{
+            color:rgb(60, 2, 57)
+         }
+         .outline{
+            //border: 1px solid rgb(221, 0, 255);
+            color: rgb(82, 4, 61);
+         }
+         &:hover{
+            border: 2px solid rgb(165, 121, 18);
+            background-color: rgba(215, 122, 255, 0.254);
+            transition: 1s ease;
+            transform: scale(1.1);
+            .card-body{
+            color: rgb(87, 9, 107);
+            }
+            .outline{
+                background-color:rgb(243, 17, 232);
+                color: #fff;
+            }
+         }
+
+    }
+
+    
+}
+
+.success{
+    //@include marginHead;
+   
+    margin-top: 20%;
+    margin-bottom: 5%;
+    
+    .card{
+        background-color: rgba(83, 4, 111, 0.863);
+        opacity: 1;
+    }
+    h2{
+        color:$purple;
+    }
+    .carousel-item{
+       img{
+        @include color;
+       }
+    .carousel-caption{
+        color: rgb(250, 201, 248);
+        font-size: 1.3rem;
+        background-color: rgba(0, 0, 0, 0.68);
+        }
+    }
+    
+}
+
+.suggestions{
+   // @include marginHead;
+    background-color: rgb(24, 1, 30);
+    color: #fff;
+}
+
+.division{
+    .col-md-2{
+     background-color: rgba(124, 0, 115, 0.862);
+     height: auto;
+     max-height: fit-content; 
+    
+     p{
+         color: White;
+         font-size: 1.6rem;
+         padding-top: 5.5em;
+     }
+     &:hover{
+         background-color: rgb(196, 4, 138);
+         transition: 1s ease-in-out;
+        p{
+         color:rgb(255, 191, 0);
+         transform: scale(0.94);
+         animation: scale 0.5s forwards cubic-bezier(0.5, 1, 0.89, 1);
+       }
+       @keyframes scale {
+         100% {
+           transform: scale(1);
+         }
+       }
+     }
+ 
+    }
+    .col-md-10{
+     .date,.location{
+         color:gray;
+         font-size: 1rem;
+         width: 200px;
+         height: fit-content;
+         
+     }
+     .show{
+        .btn{
+        color: rgb(141, 5, 105);
+        }
+
+     }
+    }
+ }
+ 
+
+.Health{
+    .col-md-2{
+     background-color: rgba(124, 0, 115, 0.862);
+     //height: 1000px;
+     max-height: fit-content; 
+        
+     p{
+         color: White;
+         font-size: 1.6rem;
+         padding-top: 5.5em;
+     }
+     &:hover{
+         background-color: rgb(196, 4, 138);
+         transition: 1s ease-in-out;
+        p{
+         color:rgb(255, 191, 0);
+         transform: scale(0.94);
+         animation: scale 0.5s forwards cubic-bezier(0.5, 1, 0.89, 1);
+       }
+       @keyframes scale {
+         100% {
+           transform: scale(1);
+         }
+       }
+     }
+ 
+    }
+    .col-md-10{
+     .date,.location{
+         color:gray;
+         font-size: 1rem;
+         width: 200px;
+         height: fit-content;
+         
+     }
+     .show{
+        color: rgb(141, 5, 105);
+
+     }
+    }
+ }
+ 
+
+
+.textblog{
+    h4{
+        font-family:$font2;
+    }
+    a{
+        text-decoration: none;
+        color: aqua;
+    }
+}
+
+.financial{
+    background-color: #fff;
+
+    .logobg{
+        background-color: rgb(124, 4, 112);
+        font-family:$font2;
+        color: #fff
+    }
+}
+
+
+/****** admin panel design css *********/
+
+.dashboard{
+   background-color: #fff;
+   .offcanvas-body a{
+    line-height: 50px;
+
+    }
+
+    .offcanvas-body a:hover{
+
+        border: 1px dotted rgb(12, 240, 232);
+      
+    }
+}
+
+.dashboard2{
+    background-color: #fff;
+    .card{
+        background-color: rgb(91, 1, 116);
+    }
+}

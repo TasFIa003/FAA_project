@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home|FAA</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <!-- Bootstrap icon-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+<body>
+    <!-----------main body------------>
+    <div class="shadow-lg logobg">
+        <div class="container row">
+            <div class="col-4 ">
+                <img class="logo " src="images/cover.png" alt="">
+            </div>
+            <div class="col-8">
+                <div class="m-3 container row">
+                    <div class="col-lg-6">
+                        <p class="h5"><i class="bi bi-telephone-fill"></i> +8801706794170</p>
+          
+                    </div>
+                    <div class="col-lg-6">
+                        <p class="h5"><i class="bi bi-envelope-fill"></i> FAA2022@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="card bgcover text-white shadow p-5">
+        <img src="images/bgcover.jpg" class="card-img" alt="" height="600">
+        <div class="card-img-overlay mt-5  border-1">
+           <ul class="nav justify-content-center">
+                    <li class="nav-item">
+                      <a class="nav-link" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#about">What are we</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                      <a class="nav-link" href="#projects">Projects</a>
+
+                    </li>
+
+                    <li class="nav-item">
+                      <a class="nav-link" href="blog" target="_blank">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="untoldStories" target="_blank">Untold stories</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact us</a>
+                    </li>
+           </ul>
+
+           <div class="context" data-aos="fade-bottom">
+            <h1 class="card-text m-5 text-center" >Female Awakening & awareness</h1>
+            <p class="card-text fs-5 m-5 text-md-end">We need women who are so strong they can be gentle, so educated they can be humble, so fierce they can be compassionate, so passionate they can be rational, and so disciplined they can be free.” ~ Kavita Ramdas</p>
+           </div>
+          
+         </div>
+    </div>
+
+    <!---------upcoming events---------->
+    <div class="events" data-aos="fade-right">
+       <h2 class="text-center fw-bold mb-5">Upcoming Events</h2>
+       <%upcoming.forEach(function(ed,i){%> 
+       <div class="card upcoming shadow p-5">
+               <input type="hidden" name="date" id="date" value="<%=ed.date%>">
+                <div class="container">
+                    <div class="d-grid gap-2 col-7 mx-auto ">
+                        <p class="btn  fw-bold fs-5 text-white">Event name: <span class="text-warning"><%=ed.title%></span></p>
+                        <p class="btn news  fw-bold fs-5 text-white" id="news"></p>
+                        <a class="btn outline fw-bold fs-5" href="<%=ed.details%>" target="_blank">Click to see the details</a>
+                    </div>
+                </div>
+       </div>
+       <%});%>
+
+    </div>
+
+    <!---what we are -->
+    <div id="about" class="about" data-aos="fade-left">
+        <h2 class="text-center fw-bold mb-5">What Are We</h2> 
+        <div class="card aboutus shadow-sm border-1">
+            <div class="container row card-body">
+            <div class="col-10">
+                <p class="card-text fw-bold fs-5 text-justify-center" data-aos="fade-bottom"><i class="bi bi-quote"></i> FAA -  Female Awakening and Awareness is a  team working as a bridge between underprivileged female and NGOs/organizations .The main objective of us are
+                    	Providing an financial environment for those females who are victim of 
+                        acid, domestic violence and many other difficult situations .
+                    	 Providing health related sessions to the women e.g., women in rural areas have no idea of proper health care. So our team may arrange a project through those women can get basic knowledge of health care. 
+                    	Many females are forced to stop their education and  get married  in early age in rural areas for two reasons i.e. financial and lack of knowledge about female education. Our motive is to work for those female also.
+                    	Spreading awareness by posting daily blog.<i class="bi bi-quote"></i>
+                </p>
+            </div>
+           
+             <div class="col-2">
+            </div>
+            
+            </div>
+           
+        </div>
+    </div>
+
+    <!-----Projects----->
+    <div id="projects" class="projects" data-aos="fade-right">
+        <h2 class="text-center fw-bold mb-5">Projects</h2> 
+        <div class="container">
+            <div class="row row-cols-1 row-cols-lg-3 g-4">
+                <div class="col">
+                  <div class="card card1 h-100 shadow-sm text-center" >
+                    <img src="images/cap.png" class="img1 card-img-top mx-auto" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title fw-bold">EDUCATION</h5>
+                      <p class="card-text">Education is a basic human right, but in developing countries like Bangladesh, special attention should be paid to the education of women. In rural households, it is common to keep young daughters out of school, believing that women were born solely to do housework.In this situation, our team organizes an event or if NGOs/organizations organize events on this topic, our team will keep you informed on the matter to you so that you can contribute.</p>
+                      <a class="btn  outline w-100 mx-auto" target="_blank" href="/education">More</a>
+                    </div>
+                  
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card card2 h-100 shadow-sm text-center mt-md-5">
+                    <img src="images/health.png" class="img2 card-img-top mx-auto mt-4" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title fw-bold">HEALTH</h5>
+                      <p class="card-text">The government of Bangladesh has been proactively focused on improving the country's healthcare scenario. A series of awareness-raising announcements was broadcast on national television, focusing on educating women about nutrition, vaccinations, pregnancy and newborns.But in rural areas, most of the women are not yet conscious of taking care of their health. Therefore, our mission is to reach them with some basic and vital health exams for life.</p>
+                      <a class="btn outline w-100 mx-auto" href="/health" target="_blank">More</a>
+                    </div>
+                   
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card card3 h-100 shadow-sm text-center" >
+                    <img src="images/services.png" class="img3 card-img-top mx-auto mt-4" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title fw-bold">FINANCIAL SERVICES</h5>
+                      <p class="card-text">Bangladeshi women have the highest literacy and employment rates ever, and the country's economy is growing. The financial inclusion rate currently stands at more than 50% and has nearly doubled in recent years. However, the gender gap in financial inclusion is also growing rapidly, with less than half of women accessing or using formal financial services.We have a responsibility to make certain arrangements so that women can support themselves financially. For this we will do the related projects in the following section.</p>
+                      <a class="btn outline w-100 mx-auto" href="/financial" target="_blank">More</a>
+                    </div>
+                    
+                  </div>
+                </div>
+              </div>
+        </div>
+    </div>
+
+
+    <!-----successful events----->
+    <div class="container success" data-aos="fade-up">
+      <h2 class="text-center fw-bold mb-5">Seccessful Events</h2> 
+      <div class="card shadow-lg p-5 border-0">
+        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          </div>
+          <div class="carousel-inner">
+            <% var i=0; %>
+            <%events.forEach(function(up,i){%>
+            <% if(i==0){ %>
+            <div class="carousel-item active" data-bs-interval="10000">
+              <% if(up.image){ %>
+                <img src="<%=up.image%>" class="img-fluid d-block w-100" alt="...">
+              <%}%>
+              <div class="carousel-caption d-none d-md-block">
+                <p class="h2"><%=up.title%></p>
+                <p><%-up.details%></p>
+              </div>
+            </div>
+            <%} else {%>
+            <div class="carousel-item" data-bs-interval="10000">
+              <% if(up.image){ %>
+                <img src="<%=up.image%>" class="img-fluid d-block w-100" alt="..." >
+                <%}%>
+              <div class="carousel-caption d-none d-md-block">
+                <p class="h2"><%=up.title%></p>
+                <p><%-up.details%></p>
+              </div>
+            </div>
+            <% } %>
+            <% i = i+1; %>
+            <%});%>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+      
+    </div>
+
+    <!----suggestions--->
+    <div class="suggestions">
+      <div id="contact" class="footer container-fluid">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-5">
+              <img src="images/cover2.png" class="mt-5 img-fluid w-25" alt="">
+              <h4 class="logo ml-5 mt-3">Female Awakening & Awareness</h4>
+              <p class=" h5">Your concern,our emotion,their happiness</p>
+             
+            </div>
+            <div class="col-lg-7">
+              <div class="row">
+               <!--- <div class="col">
+                  <div class="d-md-flex d-none mt-3 mb-5" style="height: 200px;">
+                    <div class="vr"></div>
+                  </div>
+                </div>-->
+                <div class="col m-5">
+                <h4>Follow us</h4>
+                <p><a class="text-decoration-none text-white" href="#"><i class="bi bi-facebook"></i> Facebook</a></p>
+                <p><a class="text-decoration-none text-white" href="#"><i class="bi bi-twitter"></i> Twitter</a></p>
+                <p><a class="text-decoration-none text-white" href="#"><i class="bi bi-instagram"></i> Instagram</a></p>
+                </div>
+                <div class="col mt-5">
+                  <h4>Contact us</h4>
+                <p class="text-decoration-none "><i class="bi bi-envelope-fill"></i> FAA2022@gmail.com</p>
+                <p class="text-decoration-none "><i class="bi bi-telephone-fill"></i> +880-1706794170</p>
+                <p class="text-decoration-none "><i class="bi bi-whatsapp"></i> +880-1706794170</p>
+                <p class="text-decoration-none "><i class="bi bi-telegram"></i> +880-1706794170</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="footer-text">
+            <div class="fs-6  text-center">	&copy; Tasfia Noor 2022</div>
+          </div>
+        </div>
+    </div>
+      
+    </div>
+
+
+
+     <!-- Bootstrap Bundle with Popper -->
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+     <script>
+        var date=document.getElementById("date").value
+        var countDownDate = new Date(date).getTime();
+
+        // Update the count down every 1 second
+        var x = setInterval(function() {
+
+                // Get today's date and time
+                 var now = new Date().getTime();
+    
+                // Find the distance between now and the count down date
+                var distance = countDownDate - now;
+    
+                // Time calculations for days, hours, minutes and seconds
+                var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+                // Output the result in an element with id="demo"
+                document.getElementById("news").innerHTML = days + "days | " + hours + "hours | "
+                + minutes + "minutes | " + seconds + "seconds ";
+    
+                // If the count down is over, write some text 
+                if (distance < 0) {
+                    clearInterval(x);
+                    document.getElementById("news").innerHTML = "***** NEW EVENT COMING SOON *****";
+                    }
+            }, 1000);
+
+     </script>
+       <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+       <script>
+         AOS.init({
+            offset: 200, // offset (in px) from the original trigger point
+            //delay: 0, // values from 0 to 3000, with step 50ms
+            duration: 1200,
+         });
+       </script>
+</body>
+</html>

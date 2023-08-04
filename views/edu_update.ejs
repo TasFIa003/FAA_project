@@ -1,0 +1,85 @@
+<%-include('partial/adminheader'); -%>
+<div class="container m-5">
+    <div class="headline">
+      <h4 class="text-center ">Education event information</h4>
+</div>
+
+<div class="container m-5">
+  <%edus.forEach(function(ed,i){%>
+    <div class="card  m-5 mx-auto" style="max-width: 800px;">
+      <p class="fs-4 m-5"><%=i+1%>.</p>
+      <%if(ed.image){%>
+        <img src="<%=ed.image%>" class="mt-3 d-block mx-auto card-img w-50" alt="...">
+        <%}else{%>
+        <img src="images/banner.jpg" class="mt-3 d-block mx-auto card-img w-50" alt="...">
+        <%}%> 
+        <div class="card-body">
+          <h5 class="card-title fs-4 text-capitalize"></h5>
+          <p class="fs-4 card-text">Title:</p>
+          <p><%=ed.title%></p>
+          <p class="fs-4 card-text">Date and Time:</p>
+          <p><%=ed.date%></p>
+          <p class="fs-4 card-text">location:</p>
+          <p><%=ed.location%></p>
+          <p class="fs-4 card-text">Event details:</p>
+          <p><%-ed.details%></p>
+          <div class=" row">
+            <div class="d-block mx-auto col">
+                <a  class="btn btn-success w-50" href="/educationUpdate/<%=ed.id%>">Update</a>
+            </div>
+            <div class="d-block mx-auto col">
+                <a  class="btn btn-danger w-50" href="/edu_delete/<%=ed.id%>">Delete</a>
+            </div>
+          </div>
+          
+          
+        </div>
+        
+    </div>
+    <%});%>
+
+    
+    <div class=" mx-auto text-center">
+      <a class=" btn btn-outline-dark m-5 w-25 show-more">Show more</a>
+   </div>
+  </div>
+
+
+
+<!-- Bootstrap Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+
+  <script>
+     
+
+    $(document).ready(function(){   
+    //show more option
+     var size_item = $('.card').length;
+      var v=3;
+        // hide all divs with this class.
+        $('.card').hide(); 
+        //class:lt(index)-> selects elements with an index number less than a specified number.(lt - less than)
+        //suppose,let show-more-object is list . so first two elements will show up which are in 0 and 2 index < v=3.
+        $('.card:lt('+v+')').show();
+        //when btn will be  clicked ,this function will work.
+        $('.show-more').click(function () {
+        if(v+3<=size_item){
+          v=v+3; // will show next three index elements
+        }else{
+          v=size_item; //v+3>size_item
+        }
+        $('.card:lt('+v+')').show();
+         // hide show more button if all items are visible
+        if($(".card:visible").length >= size_item ){ $(".show-more").hide(); }
+       });
+    });
+
+             
+   
+    
+   
+  
+   </script>
+
+</body>
+</html>

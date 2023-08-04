@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Education|FAA</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <!-- Bootstrap icon-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+    <div class="division container-fluid">
+        <div class="row">
+            <div class="col-md-2">
+               <p class="text-center text-capitalize">Events</p>
+              
+            </div>
+           
+            <div class="col-md-10">
+                <%eds.reverse().forEach(function(ed){%>
+                    <div class="card m-5 bg-light shadow-lg" style="max-width: 1040px;">
+                        <div class="row g-0">
+                          
+                          <div class="col-md-8">
+                            <div class="m-3 card-body">
+                              <h4 class="card-title">Title: <%=ed.title%></h4>
+                              <p class="fs-5 text-danger card-text">Date and location:</p>
+                              <p class="text-dark card-text"><%=ed.date%> </p>
+                              <p class="text-dark card-text"><%=ed.location%></p>
+                              <a class="btn btn-outline-danger w-25" href="/education_events/<%=ed.id%>" target="_blank">Check details</a>
+                            </div>
+                          </div>
+                          <div class="col-md-4">
+                            <%if(ed.image){%>
+                                <img src="<%=ed.image%>" class="img-fluid h-100 w-100">
+                                <%}else{%>
+                                <img src="images/banner.jpg" class="img-fluid h-100 w-100">
+                                <%}%> 
+                            </div>
+                          
+                        </div>
+                    
+                    </div>
+                    <%});%>
+                    <div class="show mx-auto text-center">
+                      <a class="btn btn-outline-warning  m-5 w-25 show-more">Previous events</a>
+                   </div>
+            </div>
+        </div>
+    </div>
+     
+   
+
+   
+    
+
+
+   
+
+   
+
+
+    <div class="footer-text">
+        <div class=" fixed-bottom fs-6  text-center">	&copy; Tasfia Noor 2022</div>
+      </div>
+     <!-- Bootstrap Bundle with Popper -->
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+       <script>
+     
+
+        $(document).ready(function(){   
+        //show more option
+         var size_item = $('.card').length;
+          var v=2;
+            // hide all divs with this class.
+            $('.card').hide(); 
+            //class:lt(index)-> selects elements with an index number less than a specified number.(lt - less than)
+            //suppose,let show-more-object is list . so first two elements will show up which are in 0 and 2 index < v=3.
+            $('.card:lt('+v+')').show();
+            //when btn will be  clicked ,this function will work.
+            $('.show-more').click(function () {
+            if(v+2<=size_item){
+              v=v+2; // will show next three index elements
+            }else{
+              v=size_item; //v+2>size_item
+            }
+            $('.card:lt('+v+')').show();
+             // hide show more button if all items are visible
+            if($(".card:visible").length >= size_item ){ $(".show-more").hide(); }
+           });
+        });
+    
+                 
+       
+        
+       
+      
+       </script>
+       
+</body>
+</html>
